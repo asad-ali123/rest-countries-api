@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700 ,800" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+</head>
+<body> 
+    <header class="header-container">
+        <div class="header-content">
+       <h2><a href="index.html" class="title">Where in the world?</a></h2>
+       <p class="dark-mode"><span class="moon-icon" ><i class="fa-regular fa-moon"></i></span>Dark Mode</p>
+       <p class="light-mode"><i class="fa-solid fa-sun"></i></span> Light Mode</p>
+    </div>
+    </header>
+    <main>
+        <div class="search-drop-container">
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input class="search-field" type="text" name="name" placeholder="Search for a country">
+        </div>
+        <div class="drop-menu-container">
+            <select class="drop-down-menu" name="" id="">
+                <option hidden >Filter by Region</option>
+                <option>Africa</option>
+                <option>America</option>
+                <option>Asia</option>
+                <option>Europe</option>
+                <option>Oceania</option>
+            </select>
+        </div>
+    </div>
+        <div  class="countries-container">
+        </div>
+      
+    </main>
+</body>
+</html>

@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  --background-color: white;
+  --text-color: black;
+  --ele-color: white;
+  --inp-color: hsl(0, 0%, 52%);
+  margin: 0;
+  font-family: "Nunito", "sans-serif";
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  --ele-color: hsl(209, 23%, 22%);
+
+  .light-mode{
+    display: block;
+  }
+  .dark-mode{
+    display: none;
+  }
+
+}
+.light-mode{
+  display: none;
+}
+
+.dark-mode , .light-mode{
+  cursor: pointer;
+}
+
+main {
+  padding: 24px;
+}
+.title {
+  font-weight: 800;
+}
+.header-container {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  padding-inline: 25px;
+  background-color: var(--ele-color);
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+.moon-icon {
+  margin-right: 5px;
+}
+
+.search-drop-container {
+  margin: 25px;
+  margin-inline: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+.search-bar {
+  cursor: pointer;
+  margin-bottom: 35px;
+  max-width: 600px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+background-color: var(--ele-color);
+color: var(--text-color);
+
+
+}
+.search-field {
+  cursor: pointer;
+  width: 500px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+background-color: inherit;
+color: inherit;
+ 
+
+
+}
+
+.search-bar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-icon {
+  margin-left: 30px;
+}
+.drop-down-menu {
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 35px;
+  outline: none;
+  background-color: var(--background-color);
+  color: inherit;
+
+}
+
+.drop-down-menu:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.countries-container {
+  max-width: 1400px;
+  margin-inline: auto;
+  margin-top: 16px;
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.country-card {
+  display: inline-block;
+  border-radius: 5px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
+  padding-bottom: 30px;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--elecolor);
+}
+
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+.country-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.country-card img {
+  width: 100%;
+}
+.card-text {
+  padding-inline: 20px;
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: 24px;
+  margin-block: 17px;
+}
+
+.card-text p {
+  margin-block: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .countries-container {
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .search-drop-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-field{
+    max-width: 180px
+  }
+}
+
+.back-btn {
+  padding: 6px 25px;
+  border-radius: 5px;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.country-details-container {
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 64px;
+  margin: 25px;
+}
+
+.container img {
+  width: 40%;
+}
+
+.country-sub-details {
+  display: flex;
+  flex-direction: column;
+  max-height: 180px;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  column-gap: 64px;
+}
+
+.country-sub-details p {
+  margin: 0;
+}
+
+.border-info {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.border-info a {
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px 15px;
+  margin-inline: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 850px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .country-sub-details {
+    display: block;
+    max-height: auto;
+  }
+
+  .country-sub-details p {
+    margin: 16px;
+  }
+
+  .container img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .search-field{
+    max-width: 180px
+  }
+}
